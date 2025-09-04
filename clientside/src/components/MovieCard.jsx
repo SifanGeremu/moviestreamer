@@ -1,4 +1,4 @@
-
+import "../style/MovieCard.css"
 
 function MovieCard({movie}) {
     function onFavoriteclick (){
@@ -6,17 +6,17 @@ function MovieCard({movie}) {
     }
   return (
     <>
-      <div className="movie_card">
-        <div className="movie_poster">
+      <div className="movie-card">
+        <div className="movie-poster">
           <img src={movie.url} alt={movie.poster} />
         </div>
-        <div className="movie_overlay">
+        <div className="movie-overlay">
           <button className="fav_btn" onClick={onFavoriteclick}>
             🤍
           </button>
 
         </div>
-        <div className='movie_title'>
+        <div className='movie-info'>
             <h1>{movie.title}</h1>
             <p>{movie.release_date}</p>
         </div>

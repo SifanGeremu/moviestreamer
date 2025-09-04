@@ -1,15 +1,23 @@
 
-import './App.css'
-import './components/MovieCard'
-import MovieCard from './components/MovieCard'
+
+import Favorites from './pages/Favorites'
+import Home from './pages/Home'
+import NavBar from "./components/NavBar"
+import {Routes,Route} from 'react-router-dom'
+
 function App() {
 
   return (
-    <>
-      <MovieCard movie={{title:"Breaking Bad",release_date:"2010"}}/>
-       
-    </>
-  )
+    <div>
+      <NavBar/>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
 export default App
